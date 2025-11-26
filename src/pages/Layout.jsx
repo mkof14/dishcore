@@ -62,7 +62,6 @@ function LayoutContent({ children, currentPageName }) {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const user = await import('@/api/base44Client').then(m => m.base44.auth.me());
         setCurrentUser(user);
       } catch (error) {
         console.error('Error fetching user:', error);
